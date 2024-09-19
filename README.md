@@ -52,7 +52,7 @@ The application requires certain environment variables to function correctly, pa
 
 For testing purposes I have used my own api keys.
 
-# Skip this step if you just want to test application with existing vairable values.
+### Skip this step if you just want to test application with existing vairable values.
 
 ### Backend (.env)
 ```env
