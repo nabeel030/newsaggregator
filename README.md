@@ -1,7 +1,7 @@
 
 # QuickNews
 
-A news aggregator application that fetches and displays news articles from various sources, including NewsAPI, The Guardian, and The New York Times. The project consists of a Laravel backend and a React frontend, both of which are set up and managed using Docker for easy deployment and development.
+A news aggregator application that fetches and displays news articles from various sources, including NewsAPI, The Guardian, and The New York Times. The project consists of a Laravel backend and a React frontend, both of which are set up and managed using Docker for easy deployment and development. The data is fetched using laravel schedule command and it feeds data in local database. So all operations in the frontend are done on the local data.
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)
