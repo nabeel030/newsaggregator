@@ -1,22 +1,20 @@
 
-# News Aggregator App
+# QuickNews
 
 A news aggregator application that fetches and displays news articles from various sources, including NewsAPI, The Guardian, and The New York Times. The project consists of a Laravel backend and a React frontend, both of which are set up and managed using Docker for easy deployment and development.
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)
 - [Features](#features)
-- [Getting Started](#getting-started)
+- [Installation](#installation)
 - [Project Structure](#project-structure)
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
-- [License](#license)
 
 ## Tech Stack
 - **Backend**: Laravel 11, PHP 8.2, MySQL 8
 - **Frontend**: React, Node.js 20
-- **APIs**: NewsAPI, The Guardian API, New York Times API
+- **APIs**: [NewsAPI](https://newsapi.org/), [The Guardian API](https://open-platform.theguardian.com/), [New York Times API](https://developer.nytimes.com/)
 - **Containerization**: Docker, Docker Compose
 
 ## Features
@@ -24,7 +22,7 @@ A news aggregator application that fetches and displays news articles from vario
 - Displays aggregated news in a user-friendly interface
 - Accessible via `http://localhost:3000`
 
-## Getting Started
+## Installation
 Follow these instructions to get the project up and running on your local machine.
 
 ### Prerequisites
@@ -53,6 +51,8 @@ The repository is organized into two main folders:
 ## Environment Variables
 The application requires certain environment variables to function correctly, particularly for API keys. Create an `.env` file in both the `backend` and `frontend` directories with the required variables.
 
+For testing purposes I have used my own api keys.
+
 ### Backend (.env)
 ```env
 NEWS_API_KEY=your_newsapi_key
@@ -75,9 +75,3 @@ REACT_APP_API_BASE_URL=http://localhost:8000/api
 - The backend fetches news articles from the configured APIs.
 - The frontend displays the aggregated news in a clean, user-friendly interface.
 - Access the application in your browser at [http://localhost:3000](http://localhost:3000).
-
-## Screenshots
-*(Include some screenshots of the application here to give users a preview of what the app looks like.)*
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
