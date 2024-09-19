@@ -1,0 +1,13 @@
+.banner-muted-text {
+    font-size: 14px;
+  }
+  
+  .banner-heading {
+    word-wrap: break-word;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .border-radius {
+    border-radius: 15px;
+  }

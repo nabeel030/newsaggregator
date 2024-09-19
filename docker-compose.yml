@@ -12,7 +12,8 @@ services:
     depends_on:
       - mysql
     command: >
-      sh -c "php artisan migrate --force && php-fpm"
+      sh -c "php artisan migrate --seed --force && php artisan key:generate && php artisan schedule:work & php-fpm & wait"
+
     networks:
       - backend-network
 

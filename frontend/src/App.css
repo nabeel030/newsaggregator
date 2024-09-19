@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+
+.single-article{
+  margin-bottom: 20px;
+}
+.custom-loader{
+  width: 100%;
+  text-align: center;
+  min-height: 20rem;
+  padding-top: 10rem;
+}
+
+img.card-img-top {
+  object-fit: cover;
+  height: 30vh;
+}
+
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+  text-decoration: inherit;
+}
+.dropdown-menu {
+  max-height: 20em;
+  overflow-y: scroll;
+}

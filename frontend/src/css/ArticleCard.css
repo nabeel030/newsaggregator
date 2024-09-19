@@ -1,0 +1,52 @@
+.single-article a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fixed-height-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: none !important;
+  }
+  
+  .card-img-top {
+    object-fit: cover;
+    height: 200px; /* Adjust as needed */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    height: 3.75em; /* Approximately 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    margin-bottom: 1rem; /* Space between title and description */
+  }
+  
+  .card-text {
+    flex: 1 0 auto;
+    height: 6.25em; /* Approximately 6 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Limit to 6 lines */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+  }
+  
+  .card-footer {
+    margin-top: auto;
+    padding: 16px;
+  }
+  

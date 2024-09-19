@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-class AuthController extends Controller
+class AuthController
 {
     public function login(Request $request) {
         $validator = Validator::make($request->all(),[ 
@@ -17,14 +17,19 @@ class AuthController extends Controller
         ]);
 
         if($validator->fails()){
-            return response()->json(['validationError' => $validator->messages()->toJson()], 422);
+            return response()->json(['errors' => $validator->messages()->toJson()], 422);
         }
         
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            $token = $request->user()->createToken('token')->plainTextToken;
-            return response()->json(['token' => $token]);
+            $user = Auth::user(); 
+            $token = $user->createToken('token')->plainTextToken;
+
+            return response()->json([
+                'token' => $token,
+                'user' => $user // Include user information
+            ]);
         }
 
         return response()->json(['message' => 'Login failed'], 401);
@@ -38,7 +43,7 @@ class AuthController extends Controller
         ]);
 
         if($validator->fails()){
-            return response()->json(['validationError' => $validator->messages()->toJson()], 422);
+            return response()->json(['errors' => $validator->messages()->toJson()], 422);
         }
     
         $user = User::create([
@@ -50,7 +55,11 @@ class AuthController extends Controller
         if($user) {
             Auth::login($user);
             $token = $user->createToken('token')->plainTextToken;
-            return response()->json(['token' => $token]);
+            
+            return response()->json([
+                'token' => $token,
+                'user' => $user // Include user information
+            ]);
         }
 
         return response()->json(['message' => 'Registration Failed!']);

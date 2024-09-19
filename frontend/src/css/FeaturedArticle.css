@@ -1,0 +1,36 @@
+.featured-article {
+    height: 100%;
+  }
+  
+  .featured-img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 15px;
+  }
+  
+  .featured-title {
+    font-size: 1.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+  }
+  
+  .featured-summary {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limit to 4 lines */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+  }
+  
+  .featured-author {
+    margin-top: auto; /* Makes the author text stick to the bottom of the flex column */
+  }
+
+  .border-radius {
+    border-radius: 15px;
+  }
