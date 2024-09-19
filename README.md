@@ -28,10 +28,9 @@ Follow these instructions to get the project up and running on your local machin
 ### Prerequisites
 - [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) installed on your system.
 
-### Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/news-aggregator.git
+    git clone https://github.com/nabeel030/newsaggregator.git
     cd news-aggregator
     ```
 2. Run the application using Docker Compose:
