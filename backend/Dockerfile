@@ -26,4 +26,12 @@ RUN composer install
 
 # Expose port 9000 and start PHP-FPM server
 EXPOSE 9000
-CMD ["php-fpm"]
+
+CMD bash -c " \
+    if [ ! -f /var/www/.env ]; then \
+        cp /var/www/.env.example /var/www/.env; \
+    fi; \
+    composer install; \
+    php-fpm"
+
+# CMD ["php-fpm"]
