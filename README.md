@@ -69,7 +69,8 @@ DB_PASSWORD=your_database_password
 
 ### Frontend (.env)
 ```env
-REACT_APP_API_BASE_URL=http://localhost:8000/api
+REACT_APP_BACKEND_API_URL=http://localhost:80
+REACT_APP_NAME=QuickNews
 ```
 
 ## Usage
